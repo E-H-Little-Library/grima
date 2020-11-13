@@ -8,4 +8,12 @@
         required="yes"
         placeholder="Holding ID of bib to print..."
     />
+    <Field
+    	name="mms_id"
+	label="MMS ID"
+	shortname="m"
+	autocomplete="off"
+	required="yes"
+	placeholder="MMS ID of bib to print"
+    />
 </GrimaForm>

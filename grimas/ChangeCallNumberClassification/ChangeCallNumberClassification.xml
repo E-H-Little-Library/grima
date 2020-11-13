@@ -1,0 +1,21 @@
+<GrimaForm>
+    <Title>Grima: Change Call Number Type</Title>
+    <Field
+        name="barcode"
+        label="Barcode"
+        shortname="b"
+        autocomplete="off"
+        required="yes"
+        placeholder="Barcode of record to change..."
+    />
+    <Field
+        name="indicator"
+        label="First Indicator"
+        shortname="f"
+        autocomplete="off"
+        required="yes"
+        placeholder="New first indicator..."
+    />
+
+
+</GrimaForm>

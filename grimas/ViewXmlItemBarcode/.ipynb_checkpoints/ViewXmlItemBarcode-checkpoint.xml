@@ -1,0 +1,11 @@
+<GrimaForm>
+    <Title>Grima: View XML Item</Title>
+    <Field
+        name="barcode"
+        label="Item Barcode"
+        shortname="b"
+        autocomplete="off"
+        required="yes"
+        placeholder="Barcode of item to view..."
+    />
+</GrimaForm>
