@@ -1,0 +1,11 @@
+<GrimaForm>
+    <Title>Grima: View Internal Note</Title>
+    <Field
+        name="barcode"
+        label="Barcode"
+        shortname="b"
+        autocomplete="off"
+        required="yes"
+        placeholder="Barcode of item to display..."
+    />
+</GrimaForm>
