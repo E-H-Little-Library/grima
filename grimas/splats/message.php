@@ -9,4 +9,4 @@
     extract((array) $message);
     $class = $translation[$type];
 ?>
-<div class="<?=$e($class)?>"><?=$e($message)?></div>
+<div class="<?=$e($class)?>"><?=$message?></div>

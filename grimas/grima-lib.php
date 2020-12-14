@@ -306,7 +306,17 @@ class Grima {
 			$xpath->registerNamespace("err","http://com/exlibris/urm/general/xmlbeans");
 			$error = $xpath->query('//err:errorMessage');
 			if ($error->length > 0) {
-				throw new Exception("Alma says: " . $error[0]->nodeValue);
+				$messageComponents = explode(" ", $error[0]->nodeValue);
+				if($messageComponents[0]=="Search" and $messageComponents[1]=="failed" and $messageComponents[2]=="for" and $messageComponents[3]=="Items"){// and $messageComponents[5]=="mmsId" and $messageComponents[7]=="holdings"and $messageComponents[8]=="id") {
+					$mms_id = substr($messageComponents[6], 0, -1);
+					$holding_id = substr($messageComponents[9], 0, -1);
+					throw new Exception('There are no items attached to this holding any more. Click <a class="alert-link" href="../DeleteHolding/DeleteHolding.php?mms_id=' . $mms_id . '&holding_id=' . $holding_id . '" >here</a> to delete it.');
+				} else if($messageComponents[0]=="Search" and $messageComponents[1]=="failed" and $messageComponents[2]=="for" and $messageComponents[3]=="Holdings"){
+					$mms_id = substr($messageComponents[5], 0, -1);
+					throw new Exception('There are no holdings attached to this bib any more. Click <a href="../DeleteBib/DeleteBib.php?mms_id=' . $this['mms_id'] . '&target="_blank">here</a> to delete it.');
+				} else {
+					throw new Exception("Alma says: " . $error[0]->nodeValue);
+				}
 			}
 		}
 	}
@@ -569,7 +579,7 @@ class Grima {
 /**@name Item List APIs */
 /**@{*/
 
-// {{{ getItemList (Retrieve Items list)
+// {{{  (Retrieve Items list)
 /**
  * @brief Retrieve Items list - retrieve the items list from a holding or bib from Alma
  *
@@ -1587,6 +1597,84 @@ class GrimaFormField {
 
 }
 
+
+
+/** @class GrimaFormField
+ ** @brief Wrapper for each field in a form, keeping track of its properties
+ */
+class GrimaFormChoice {
+
+	public $value;
+
+	public $name;
+	public $label;
+	public $placeholder;
+	public $required;
+	public $persistent;
+	public $visible;
+	public $rows;
+	protected $autocomplete;
+	protected $highlight;
+	public $error_condition = ""; /* can be warning or error */
+	public $error_message = "";
+
+// {{{ booly - is it true or false
+/**
+ * return boolean meaning of common terms ("true","on","1","yes")
+ *
+ * @param string $str term to interpret
+ * @param $default if it is not found
+ * @return boolean true or false
+ */
+	function booly($str, $default = 'undefined') {
+		switch(strtolower($str)) {
+			case 'true':
+			case 't':
+			case 'on':
+			case 'yes':
+			case '1':
+				return true;
+			case 'false':
+			case 'f':
+			case 'off':
+			case 'no':
+			case '0':
+				return false;
+			default:
+				return $default;
+		}
+	}
+// }}}
+
+// {{{ __construct
+/**
+ * @brief create a new GrimaFormField
+ *
+ * @param DomNode $field with attributes for all properties
+ */
+	function __construct($field) {
+		$this->name = $field->getAttribute('name');
+		$this->label = $field->getAttribute('label');
+		$this->placeholder = $field->getAttribute('placeholder');
+		$this->rows = $field->getAttribute('rows');
+		$this->type = $field->getAttribute('type');
+		if (!$this->type) {
+			$this->type = 'input';
+		}
+		$this->required = $this->booly($field->getAttribute('required'),true);
+		$this->persistent = $this->booly($field->getAttribute('persistent'),false);
+		$this->autocomplete = $this->booly($field->getAttribute('autocomplete'),false);
+		$this->visible = $this->booly($field->getAttribute('visible'),true);
+		$this->options = array();
+		foreach ($field->getElementsByTagName("option") as $option) {
+			$this->options[] = $option->ownerDocument->saveXML( $option );
+		}
+	}
+// }}}
+
+}
+
+
 // }}}
 
 //{{{ class AlmaObject
@@ -1658,12 +1746,18 @@ class AlmaObjectWithMARC extends AlmaObject {
  * @param string $tag a three character MARC tag
  * @param Int $ind1 one digit, first indicator
  * @param Int $ind2 second digit, second indicator
- * @param Array $subfields each entry of the form $code => $value
+ * @param Array $subfields each entry of the form $code => $value or $code => Array($value1, $value2, ...)
  */
 	function appendField($tag,$ind1,$ind2,$subfields) {
 		$frag = "<datafield ind1=\"$ind1\" ind2=\"$ind2\" tag=\"$tag\">";
 		foreach ($subfields as $k => $v) {
-			$frag .= "<subfield code=\"$k\">$v</subfield>";
+			if(is_array($v)){
+				foreach ($v as $k2 => $v2) {
+					$frag .= "<subfield code=\"$k\">$v2</subfield>";
+				}
+			} else {
+				$frag .= "<subfield code=\"$k\">$v</subfield>";
+			}
 		}
 		$frag .= "</datafield>";
 		$xpath = new DomXpath($this->xml);

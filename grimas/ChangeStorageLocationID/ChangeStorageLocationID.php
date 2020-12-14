@@ -12,7 +12,7 @@ class ChangeStorageLocationID extends GrimaTask {
 	}
     
     function print_success() {
-		GrimaTask::call('ViewXmlItemBarcode', array('barcode' => $this['barcode']));
+		GrimaTask::call('ViewItemRecord', array('barcode' => $this['barcode']));
 	}
 
 }

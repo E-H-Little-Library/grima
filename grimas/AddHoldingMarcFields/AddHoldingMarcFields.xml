@@ -1,0 +1,28 @@
+<GrimaForm>
+    <Title>Grima: AddMarcHoldingFields</Title>
+     <Field
+        name="mms_id"
+        label="MMS ID"
+        shortname="m"
+        autocomplete="off"
+        required="no"
+        placeholder="MMS ID of bib record"
+    />
+	<Field
+        name="holding_id"
+        label="Holding ID"
+        shortname="h"
+        autocomplete="off"
+        required="no"
+        placeholder="holding ID of bib record"
+    />
+	<Field
+        name="newFields"
+        label="New Marc Fields"
+        autocomplete="off"
+        required="yes"
+        placeholder="MARC Fields, one per line.
+Prepend fields by $$ and use _ as blank indicators"
+		rows="5"
+    />
+</GrimaForm>

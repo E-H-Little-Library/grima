@@ -7,7 +7,6 @@ class ViewInternalNote extends GrimaTask {
 	function do_task() {
 		$item = new Item();
 		$item->loadFromAlmaBarcode($this['barcode']);
-		$barcode = $this['barcode'];
 		echo nl2br("The nonempty internal note fields are below: \r\n");
 		if(strlen($item['internal_note_1'] ) > 0){
 			echo nl2br("Internal Note Field 1: " . $item['internal_note_1']  . "\r\n");

@@ -1,0 +1,74 @@
+<div style='transform: scale(0.65); position: relative; top: -50px;'>
+  <h1>Select how you want to find the holding record to add the item to. </h1>
+  <hr />
+
+  <div id='block-11' style='padding: 10px;'>
+    <label for='option-11' style=' padding: 5px; font-size: 2.5rem;'>
+      <input type='radio' name='option' value='6/24' id='option-11' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+      Provide an MMS ID and holding ID.</label>
+    <span id='result-11'></span>
+  </div>
+  <hr />
+  <form style='padding: 10px;'>
+	<label for="mms_id" style=' padding: 5px; font-size: 2.0rem;' >MMS ID:</label><br>
+    <input type="text" id="mms_id1" name="mms_id" style='transform: scale(1.6); margin-left:55px; margin-top:25px; margin-bottom:25px' ><br>
+    <label for="holding_id" style=' padding: 5px; font-size: 2.0rem' >Holding ID:</label><br>
+    <input type="text" id="holding_id1" name="holding_id" style='transform: scale(1.6); margin-left:55px; margin-top:25px' ><br>
+  </form>
+  <div id='block-12' style='padding: 10px;'>
+    <label for='option-12' style=' padding: 5px; font-size: 2.5rem;'>
+      <input type='radio' name='option' value='6' id='option-12' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+      Look up a holding ID from an MMS ID.</label>
+    <span id='result-12'></span>
+  </div>
+  <hr />
+  <form style='padding: 10px;'>
+	<label for="mms_id" style=' padding: 5px; font-size: 2.0rem;' >MMS ID:</label><br>
+    <input type="text" id="mms_id2" name="mms_id" style='transform: scale(1.6); margin-left:55px; margin-top:25px' ><br>
+  </form>
+  <div id='block-13' style='padding: 10px;'>
+    <label for='option-13' style=' padding: 5px; font-size: 2.5rem;'>
+      <input type='radio' name='option' value='1/3' id='option-13' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+      Use the holding ID from a barcode.</label>
+    <span id='result-13'></span>
+  </div>
+  <hr />
+  <form style='padding: 10px;'>
+	<label for="barcode" style=' padding: 5px; font-size: 2.0rem;' >Barcode:</label><br>
+    <input type="text" id="barcode3" name="barcode" style='transform: scale(1.6); margin-left:55px; margin-top:25px' ><br>
+  </form>
+  </form>
+  <div id='block-14' style='padding: 10px;'>
+    <label for='option-14' style=' padding: 5px; font-size: 2.5rem;'>
+      <input type='radio' name='option' value='1/3' id='option-14' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+      Copy a previous item record from a  barcode.</label>
+    <span id='result-14'></span>
+  </div>
+  <hr />
+  <form style='padding: 10px;'>
+	<label for="barcode" style=' padding: 5px; font-size: 2.0rem;' >Barcode:</label><br>
+    <input type="text" id="barcode4" name="barcode" style='transform: scale(1.6); margin-left:55px; margin-top:25px' ><br>
+  </form>
+
+  <hr />
+  
+  <button type='button' onclick='displayAnswer1()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+</div>
+<a id='showanswer1'></a>
+<script>
+  //    The function evaluates the answer and displays result
+  function displayAnswer1() {
+    if (document.getElementById('option-11').checked) {
+      window.location.href = 'http://localhost:32900/grimas/AddNewItemRecord/AddNewItemRecord.php?mms_id='+document.getElementById("mms_id1").value+"&holding_id="+document.getElementById("holding_id1").value;
+    }
+    if (document.getElementById('option-12').checked) {
+      window.location.href = 'http://localhost:32900/grimas/AddItemFromMMSID/AddItemFromMMSID.php?mms_id='+document.getElementById("mms_id2").value;
+    }
+    if (document.getElementById('option-13').checked) {
+      window.location.href = 'http://localhost:32900/grimas/AddItemFromBarcode/AddItemFromBarcode.php?barcode='+document.getElementById("barcode3").value;
+    }
+	if (document.getElementById('option-14').checked) {
+      window.location.href = 'http://localhost:32900/grimas/MoreItems/MoreItems.php?barcode_model='+document.getElementById("barcode4").value;
+    }
+  }
+</script>

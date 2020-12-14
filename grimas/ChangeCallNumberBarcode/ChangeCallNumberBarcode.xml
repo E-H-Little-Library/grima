@@ -1,0 +1,31 @@
+<GrimaForm>
+    <Title>Grima: Change Call Number From Barcode</Title>
+    <Field
+        name="barcode"
+        label="Barcode"
+        shortname="b"
+        autocomplete="off"
+        required="yes"
+        placeholder="Barcode of item to change"
+    />
+	
+	<Field
+        name="newField"
+        label="new Field"
+        shortname="m"
+        autocomplete="off"
+        required="no"
+        placeholder="new Field"
+    />
+	
+	<Field
+        name="confirm"
+        label="confirm"
+        shortname="m"
+        autocomplete="off"
+        required="yes"
+        placeholder="new Field"
+    />
+	
+
+</GrimaForm>

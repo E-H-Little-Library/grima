@@ -1,0 +1,12 @@
+<GrimaForm>
+    <Title>Grima: Add Hold Marc Fields From Barcode</Title>
+    <Field
+        name="barcode"
+        label="Barcode"
+        shortname="b"
+        autocomplete="off"
+        required="yes"
+        placeholder="Barcode of item from holding record which needs new fields"
+    />
+
+</GrimaForm>

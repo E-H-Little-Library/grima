@@ -1,0 +1,369 @@
+<GrimaForm>
+    <Title>Grima: Add New Item Record</Title>
+    
+<Field
+        name="mms_id"
+        label="mms id"
+        autocomplete="on"
+        required="yes"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="holding_id"
+        label="holding id"
+        autocomplete="on"
+        required="yes"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="barcode"
+        label="barcode"
+        autocomplete="on"
+        required="yes"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="provenance"
+        label="provenance"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="physical_condition"
+        label="physical condition"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="storage_location_id"
+        label="storage location id"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="in_temp_location"
+        label="in temp location"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+
+<Field
+        name="temp_library"
+        label="temp library"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="temp_location"
+        label="temp location"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+
+<Field
+        name="physical_material_type_code"
+        label="physical material type code"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="physical_material_type"
+        label="physical material type"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="policy"
+        label="policy"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="item_policy"
+        label="item policy"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="is_magnetic"
+        label="is magnetic"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="description"
+        label="description"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="pages"
+        label="pages"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="pieces"
+        label="pieces"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="public_note"
+        label="public note"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="fulfillment_note"
+        label="fulfillment note"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="internal_note_1"
+        label="internal note 1"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="internal_note_2"
+        label="internal note 2"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="internal_note_3"
+        label="internal note 3"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="statistics_note_1"
+        label="statistics note 1"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="statistics_note_2"
+        label="statistics note 2"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="statistics_note_3"
+        label="statistics note 3"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="enumeration_a"
+        label="enumeration a"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="enumeration_b"
+        label="enumeration b"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="enumeration_c"
+        label="enumeration c"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="enumeration_d"
+        label="enumeration d"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="enumeration_e"
+        label="enumeration e"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="enumeration_f"
+        label="enumeration f"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="enumeration_g"
+        label="enumeration g"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="enumeration_h"
+        label="enumeration h"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="chronology_i"
+        label="chronology i"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="chronology_j"
+        label="chronology j"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="chronology_k"
+        label="chronology k"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="chronology_l"
+        label="chronology l"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="chronology_m"
+        label="chronology m"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="requested"
+        label="requested"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+
+<Field
+        name="creation_date"
+        label="creation date"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="arrival_date"
+        label="arrival date"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="year_of_issue"
+        label="year of issue"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="modification_date"
+        label="modification date"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="receiving_operator"
+        label="receiving operator"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+<Field
+        name="process_type"
+        label="process type"
+        autocomplete="on"
+        required="no"
+        persistent="yes"
+        placeholder=""
+/>
+
+
+</GrimaForm>

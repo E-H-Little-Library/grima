@@ -1,0 +1,38 @@
+<GrimaForm>
+    <Title>Grima: Change Call Number</Title>
+    <Field
+        name="mms_id"
+        label="MMS ID"
+        shortname="m"
+        autocomplete="off"
+        required="yes"
+        placeholder="MMS ID of main bib..."
+    />
+	<Field
+        name="holding_id"
+        label="Holding ID"
+        shortname="m"
+        autocomplete="off"
+        required="yes"
+        placeholder="Holding ID"
+    />
+	<Field
+        name="newField"
+        label="new Field"
+        shortname="m"
+        autocomplete="off"
+        required="no"
+        placeholder="new Field"
+    />
+	
+	<Field
+        name="confirm"
+        label="confirm"
+        shortname="m"
+        autocomplete="off"
+        required="yes"
+        placeholder="new Field"
+    />
+	
+
+</GrimaForm>

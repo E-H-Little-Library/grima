@@ -1,0 +1,17 @@
+<GrimaForm>
+	<Title>Grima: Delete Holding</Title>
+	<Field
+		name="mms_id"
+		label="MMS ID"
+		shortname="m"
+		autocomplete="off"
+		required="yes"
+	/>
+	<Field
+		name="holding_id"
+		label="holding ID"
+		shortname="m"
+		autocomplete="off"
+		required="yes"
+	/>
+</GrimaForm>

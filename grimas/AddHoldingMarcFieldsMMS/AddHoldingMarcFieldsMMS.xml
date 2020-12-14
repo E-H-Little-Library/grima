@@ -1,0 +1,11 @@
+<GrimaForm>
+    <Title>Grima: Add Holding Marc Fields From MMSID</Title>
+    <Field
+        name="mms_id"
+        label="MMS ID"
+        shortname="m"
+        autocomplete="off"
+        required="yes"
+        placeholder="MMS ID of main bib..."
+    />
+</GrimaForm>

@@ -1,7 +1,7 @@
 <div class='card mt-2 bib'>
   <div class='card-header'>
     <h1 class='card-title'>Holding #<?=$e($holding['holding_id'])?>
-      <a class='d-print-none viewlink' href="../PrintHolding/PrintHolding.php?holding_id=<?=$e($holding['holding_id'])?>">(view)</a>
+      <a class='d-print-none viewlink' href="../PrintHolding/PrintHolding.php?holding_id=<?=$e($holding['holding_id'])?>&mms_id=<?=$e($bib['mms_id'])?>">(view)</a>
     </h1>
   </div>
   <div class='card-body'>
