@@ -35,7 +35,7 @@ https://raw.githubusercontent.com/Homebrew/install/master/install)"
   <ol>
   <li> sudo apt-get update </li>
   <li> sudo apt-get install php-xml php-sqlite3 php-curl php git </li>
-  <li> git clone https://github.com/brkronheim/grima.git </li>
+  <li> git clone https://github.com/E-H-Little-Library/grima.git </li>
   <li> Type ‘cd grima’ and press enter </li>
   <li> Type ‘echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc’ </li>
   <li> Restart Ubuntu </li>
